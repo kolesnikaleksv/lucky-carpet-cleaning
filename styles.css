@@ -21,6 +21,7 @@ body {
   flex-direction: column;
   height: 100vh;
   font-size: 17px;
+  color: #404040;
 }
 
 .header {
@@ -81,23 +82,148 @@ body {
 }
 .mobile a:hover,
 .header-email a:hover {
-  /* color: #1b1f4c; */
   color: #39bae7;
 }
-.header-logo {
-  max-height: 128px;
+.header-bottom {
+  width: 100%;
+  padding: 10px 0;
+}
+.bottom-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  max-height: 148px;
+  overflow: hidden;
+  width: 148px;
+}
+.logo img {
+  max-height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-size: 16px;
+}
+.menu-button:hover {
+  cursor: pointer;
+}
+.menu {
+  visibility: visible;
+}
+.menu-button {
+  display: none;
+}
+.menu-item a {
+  text-decoration: none;
+  color: #404040;
+  padding: 10px;
+}
+
+.menu-item a:hover {
+  background-color: #39bae7;
+  color: #ffffff;
+}
+.isOpen {
+  overflow: hidden;
 }
 .main {
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer {
   background-color: #124eb0;
   height: 40px;
   width: 100%;
 }
+.hidden {
+  display: none;
+}
+.close-btn {
+  display: none;
+}
 
-@media (max-width: 520px) {
+@media (max-width: 989px) {
+  .top-wrapper {
+    padding: 10px 20px;
+  }
+  .header-contacts {
+    flex-direction: column;
+    align-items: end;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 766px) {
+  .header-contacts {
+    align-items: center;
+  }
+  .menu {
+    visibility: hidden;
+    position: fixed;
+  }
+  .menu-button {
+    display: block;
+  }
+  .menu-button.hidden {
+    display: none;
+  }
+  .mobile-menu-active {
+    visibility: visible;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  .wrapper-menu-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-item {
+    display: flex;
+    padding: 10px;
+  }
+  .wrapper-menu-active .close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .close-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 478px) {
   .top-wrapper {
     flex-direction: column;
+    gap: 10px;
+  }
+  .header-contacts {
+    gap: 10px;
   }
 }
