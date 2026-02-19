@@ -96,7 +96,7 @@
     </header>
 
     <main class="main">
-      <section id="services" class="services">
+      <section class="services">
         <div class="services-inner-wrapper container">
           <h2 class="services-headline">
             Carpet Cleaning And End Of Tenancy Cleaning Services
@@ -147,6 +147,46 @@
         </div>
       </div>
     </footer>
+    <div class="model-window">
+      <div class="form-wrapper">
+        <h2 class="form-title">Get a Quote</h2>
+        <form
+          id="contactForm"
+          class="contact-form"
+          action="send.php"
+          method="POST"
+        >
+          <input
+            class="input-item"
+            type="text"
+            name="name"
+            placeholder="Yor name"
+            required
+          />
+          <input
+            class="input-item"
+            type="text"
+            name="subject"
+            placeholder="Subject"
+          />
+          <input
+            class="input-item"
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            class="input-item"
+            type="tel"
+            name="phone"
+            placeholder="Phone"
+          />
+          <textarea name="Message" placeholder="Your Message"></textarea>
+          <input class="submit-btn" type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>

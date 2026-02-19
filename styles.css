@@ -257,6 +257,72 @@ footer {
   text-decoration: none;
   font-weight: 700;
 }
+/* Model Window */
+.model-window {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  background-color: #ffffff;
+  max-height: 100vh;
+  padding: 20px;
+}
+.form-title {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #124eb0;
+}
+.contact-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input-item {
+  padding: 5px 4px;
+  margin-bottom: 24px;
+  line-height: 2;
+  min-height: 2rem;
+  font-size: inherit;
+  font-family: inherit;
+  width: 100%;
+}
+.contact-form > textarea {
+  margin-bottom: 24px;
+  padding: 6px 8px;
+  line-height: 1.5;
+  resize: none;
+  min-height: 2rem;
+  font-size: inherit;
+  font-family: inherit;
+  width: 100%;
+  height: 80px;
+  overflow: auto;
+}
+.submit-btn {
+  padding: 15px 40px;
+  box-shadow: 7px 9px 8px -4px rgba(0, 0, 0, 0.73);
+  border-radius: 8px;
+  cursor: pointer;
+  background: #124eb0;
+  color: #fff;
+  font-size: inherit;
+}
+.submitBtn:hover {
+  background-color: #39bae7;
+}
 @media (max-width: 989px) {
   .top-wrapper {
     padding: 10px 20px;
@@ -276,6 +342,9 @@ footer {
   .designer {
     text-align: center;
     white-space: nowrap;
+  }
+  .form-wrapper {
+    width: 70%;
   }
 }
 
@@ -339,6 +408,9 @@ footer {
   .service-list-wrapper {
     width: 100%;
   }
+  .form-wrapper {
+    width: 80%;
+  }
 }
 
 @media (max-width: 478px) {
@@ -351,5 +423,8 @@ footer {
   }
   .services-inner-wrapper {
     padding: 5% 20px;
+  }
+  .form-wrapper {
+    width: 85%;
   }
 }
