@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 @font-face {
   font-family: 'SourceSansPro';
@@ -38,10 +39,24 @@ h3 {
   line-height: 1.2;
   font-weight: 700;
 }
-/* dark-blue: #124EB0;
- light-blue: #39BAE7 */
+h4 {
+  font-size: clamp(16px, calc(1rem + ((1vw - 3.2px) * 0.2381)), 20px);
+  line-height: 1.2;
+}
+.blue-light-color {
+  color: #39bae7;
+}
+.blue-dark-color {
+  color: #124eb0;
+}
+.blue-light-background {
+  background-color: #39bae7;
+}
+.blue-dark-background {
+  background-color: #124eb0;
+}
 body {
-  font-family: 'SourceSansPro', sans-serif;
+  font-family: 'SourceSansPro';
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -257,6 +272,88 @@ footer {
   text-decoration: none;
   font-weight: 700;
 }
+/* About */
+.about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.about-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  padding: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 1.1905)), 40px) 20px;
+}
+.headline {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.about-title {
+  align-self: center;
+  text-align: center;
+  color: #39bae7;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.about-title > span {
+  font-weight: 400;
+}
+.text-block {
+  align-self: center;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.about-inner p {
+  align-self: center;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.advantages {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.advantages-item-wrap {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: nowrap;
+}
+.advantages-item {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.advantages-title {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.advantages-text {
+  color: #ffffff;
+  text-align: center;
+}
+.advantages-text a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.advantages-text a:hover {
+  color: #39bae7;
+  text-decoration: none;
+}
 /* Model Window */
 .model-window {
   display: none;
@@ -410,6 +507,13 @@ footer {
   }
   .form-wrapper {
     width: 80%;
+  }
+  .advantages {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .advantages-item-wrap {
+    width: 100%;
   }
 }
 
