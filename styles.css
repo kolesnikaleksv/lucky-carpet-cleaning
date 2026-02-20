@@ -354,6 +354,30 @@ footer {
   color: #39bae7;
   text-decoration: none;
 }
+/* Advertisement block */
+.ad-block {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 1.1905)), 40px);
+  padding-bottom: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 1.1905)), 40px);
+}
+.ad-block-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.ad-block-title {
+  color: #ffffff;
+  align-self: center;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
 /* Model Window */
 .model-window {
   display: none;
