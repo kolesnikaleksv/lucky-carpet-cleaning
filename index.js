@@ -44,5 +44,9 @@ document.querySelector('.submit-btn').addEventListener('click', () => {
 });
 
 window.onclick = (e) => {
-  if (e.target === modelWindow) modelWindow.style.display = 'none';
+  if (e.target === modelWindow) {
+    modelWindow.style.display = 'none';
+    body.classList.remove('isOpen');
+    f;
+  }
 };
