@@ -6,6 +6,7 @@
     <title>Cleaning company</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/libraries/swiper-bundle.min.css" />
   </head>
   <body>
     <header class="header">
@@ -76,7 +77,7 @@
             </div>
             <ul class="menu">
               <li class="menu-item">
-                <a href="/#about">About</a>
+                <a href="/#about" id="menu-about">About</a>
               </li>
               <li class="menu-item">
                 <a href="/#nestimonials">Testimonials</a>
@@ -143,7 +144,7 @@
             <span>Professional</span> Carpet Cleaning Services
             <span>in Kent</span>
           </h2>
-          <div class="text-block">
+          <div class="about-text-block">
             <p>
               Lucky Carpet Cleaning provides expert carpet cleaning services
               across Kent, covering Folkestone, Ashford, Dover, Canterbury and
@@ -225,6 +226,64 @@
           <div class="form-open">Contact Us</div>
         </div>
       </section>
+      <section class="testimonials">
+        <div class="testimonials-inner-wrap container">
+          <h4 class="headline">What Our Clients Say</h4>
+          <p class="testimonials-title blue-dark-color">Testimonials</p>
+          <div class="slider-block">
+            <div class="image-wrapper">
+              <img src="/icons/chat-speech-bubble-icon.svg" alt="bubble icon" />
+            </div>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="text-block">
+                    <p>
+                      <span>Igor Polishchuk: </span> Very satisfied with the car
+                      seat cleaning! Everything looks like new — stains are
+                      gone, fresh scent, and the job was done quickly and
+                      professionally. Highly recommend!
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="text-block">
+                    <p>
+                      <span>Mariia Skvortsova: </span> I booked an at-home
+                      carpet and sofa cleaning service and was genuinely
+                      impressed with the results. The cleaner arrived on time,
+                      was polite and professional, and worked very efficiently.
+                      My carpet looks fresh again and the sofa has come up
+                      beautifully — even a couple of old marks have completely
+                      gone. Everything was left tidy afterwards. Really pleased
+                      with the service and would happily use them again.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="text-block">
+                    Evershine Carpet Clean did a great job cleaning our boat.
+                    Well-priced and truly professional arrived Saturday morning
+                    to help us out with our white carpet on our boat 5-star
+                    service from start to finish thanks.
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="text-block">
+                    I had Evershine Carpet out to clean my couch and they were
+                    excellent to work with. Response time inquiring about rates
+                    and appointment availability was excellent and their
+                    technician was perfectly on time for our appointment window
+                    and did a great job. Would absolutely hire this business
+                    again.
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -280,6 +339,7 @@
         </form>
       </div>
     </div>
+    <script src="/libraries/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
   </body>
 </html>

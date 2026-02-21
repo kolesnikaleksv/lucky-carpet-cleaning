@@ -50,3 +50,33 @@ window.onclick = (e) => {
     f;
   }
 };
+
+const swiper = new Swiper('.swiper', {
+  speed: 800,
+  loop: true,
+  pagination: { el: '.swiper-pagination', clickable: true },
+  autoplay: {
+    delay: 3000,
+  },
+});
+
+document.getElementById('menu-about').addEventListener('click', function (e) {
+  e.preventDefault();
+  const target = document.getElementById('about');
+  const targetPosition =
+    target.getBoundingClientRect().top + window.pageYOffset;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  const duration = 1000;
+  let start = null;
+  function step(timestamp) {
+    if (!start) start = timestamp;
+    const progress = timestamp - start;
+    const percent = Math.min(progress / duration, 1);
+    window.scrollTo(0, startPosition + distance * percent);
+    if (progress < duration) {
+      requestAnimationFrame(step);
+    }
+  }
+  requestAnimationFrame(step);
+});
