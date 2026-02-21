@@ -282,7 +282,6 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   padding: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 1.1905)), 40px) 20px;
 }
@@ -290,6 +289,7 @@ footer {
   text-align: center;
   text-transform: uppercase;
   font-weight: 300;
+  align-self: center;
 }
 .about-title {
   align-self: center;
@@ -389,7 +389,8 @@ footer {
   padding-bottom: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 1.1905)), 40px);
   width: 100%;
 }
-.testimonials-title {
+.testimonials-title,
+.features-title {
   font-weight: 300;
   align-self: center;
   text-align: center;
@@ -430,7 +431,6 @@ footer {
   font-size: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 0.2381)), 24px);
   font-weight: 300;
   color: #404040;
-  /* padding-bottom: 40px; */
 }
 .text-block span {
   font-weight: 700;
@@ -448,6 +448,59 @@ footer {
 .swiper-pagination .swiper-pagination-bullet-active {
   background: #124eb0;
   transform: scale(1.2);
+}
+/* Features */
+.features {
+  background-image:
+    linear-gradient(rgba(27, 31, 76, 0.66), rgba(27, 31, 76, 0.66)),
+    url(/images/carpet-cleaning-near-me.webp);
+  background-size: auto, cover;
+  background-color: #124eb0;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100%;
+  color: #ffffff;
+}
+.features-inner-wrap {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 1.1905)), 40px) 20px;
+}
+
+.features-block {
+  align-items: stretch;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  display: grid;
+  margin-top: 30px;
+  width: 100%;
+}
+.features-item {
+  background-color: rgba(255, 255, 255, 0.25);
+  flex-direction: column;
+  display: flex;
+  text-align: left;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+.features-image {
+  max-width: 100%;
+}
+.feature-headline {
+  margin-top: 15px;
+}
+.feature-headline-bottom {
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.feature-text-block {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 15px;
 }
 /* Model Window */
 .model-window {
@@ -541,6 +594,13 @@ footer {
   .slider-block {
     width: 100%;
   }
+  .features-block {
+    align-items: stretch;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    display: grid;
+  }
 }
 
 @media (max-width: 766px) {
@@ -615,6 +675,13 @@ footer {
   }
   .swiper {
     height: 350px;
+  }
+  .features-block {
+    align-items: stretch;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    display: grid;
   }
 }
 
