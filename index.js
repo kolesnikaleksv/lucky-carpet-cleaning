@@ -60,9 +60,9 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-document.getElementById('menu-about').addEventListener('click', function (e) {
-  e.preventDefault();
-  const target = document.getElementById('about');
+const smoothScrollTo = (id) => {
+  const target = document.getElementById(id);
+  if (!target) return;
   const targetPosition =
     target.getBoundingClientRect().top + window.pageYOffset;
   const startPosition = window.pageYOffset;
@@ -79,4 +79,9 @@ document.getElementById('menu-about').addEventListener('click', function (e) {
     }
   }
   requestAnimationFrame(step);
+};
+
+menu.addEventListener('click', (e) => {
+  e.preventDefault();
+  smoothScrollTo(e.target.id.slice(5));
 });
