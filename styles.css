@@ -322,8 +322,8 @@ footer {
   flex-wrap: nowrap;
 }
 .advantages-item-wrap {
-  width: 33.33%;
   display: flex;
+  flex: 1;
   flex-direction: column;
   text-align: left;
   align-items: center;
@@ -338,21 +338,18 @@ footer {
   flex-wrap: nowrap;
 }
 .advantages-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin-top: 15px;
   margin-bottom: 15px;
+  min-height: 2.5em;
 }
 .advantages-text {
   color: #ffffff;
   text-align: center;
-}
-.advantages-text a {
-  color: #ffffff;
-  text-decoration: none;
-}
-.advantages-text a:hover {
-  color: #39bae7;
-  text-decoration: none;
+  flex-grow: 1;
 }
 /* Advertisement block */
 .ad-block {
