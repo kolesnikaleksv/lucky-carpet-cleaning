@@ -1,4 +1,5 @@
 'use strict';
+import PhotoSwipeLightbox from '/libraries/photoswipe-lightbox.esm.min.js';
 
 const mobileMenuButton = document.querySelector('.menu-button');
 const body = document.body;
@@ -85,3 +86,10 @@ menu.addEventListener('click', (e) => {
   e.preventDefault();
   smoothScrollTo(e.target.id.slice(5));
 });
+
+const lightbox = new PhotoSwipeLightbox({
+  gallery: '#gallery--responsive-images',
+  children: 'a',
+  pswpModule: () => import('/libraries/photoswipe.esm.js'),
+});
+lightbox.init();
