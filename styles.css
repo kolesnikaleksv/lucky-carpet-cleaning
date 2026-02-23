@@ -96,7 +96,7 @@ body {
   max-width: 1170px;
   padding: 0 20px;
 }
-.header-social {
+.social-block {
   display: flex;
   justify-content: space-between;
   gap: 15px;
@@ -111,20 +111,23 @@ body {
   padding-right: 10px;
 }
 .mobile,
-.header-email {
+.header-email,
+.map-marker {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 7px;
 }
 .mobile a,
-.header-email a {
+.header-email a,
+.map-marker a {
   color: white;
   text-decoration: none;
   white-space: nowrap;
 }
 .mobile a:hover,
-.header-email a:hover {
+.header-email a:hover,
+.map-marker a:hover {
   color: #39bae7;
 }
 .header-bottom {
@@ -540,7 +543,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 1.1905)), 40px);
+  padding: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 1.1905)), 40px) 20px;
 }
 .reviews-subtitle {
   display: block;
@@ -574,6 +577,78 @@ body {
 .reviews-image {
   width: 100%;
   border-style: none;
+}
+/* Contatcts */
+.contacts {
+  width: 100%;
+  background-image:
+    linear-gradient(rgba(18, 78, 176, 0.9), rgba(10, 40, 120, 0.9)),
+    url(/images/lucky-carpet-cleaning.webp);
+  background-size: auto, cover;
+  background-color: #124eb0;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  justify-content: center;
+}
+.contacts-inner-wrap {
+  padding: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 1.1905)), 40px) 20px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.contacts-logo,
+.contacts-text,
+.constacts-info {
+  width: 33%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  padding: 20px;
+}
+.contacts-logo {
+  padding: 13px 8px 8px;
+  display: flex;
+  justify-content: center;
+}
+.constacts-link {
+  display: flex;
+}
+.contacts-image {
+  width: 250px;
+  border-radius: 50%;
+}
+.contacts-text {
+  color: #ffffff;
+  text-align: start;
+  margin: 20px 0;
+  align-items: center;
+}
+.constacts-info {
+  flex-direction: column;
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.contacts-title {
+  color: #39bae7;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+.constacts-info .mobile,
+.header-email,
+.map-marker {
+  margin-bottom: 10px;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.constacts-info .social-block {
+  margin-top: 15px;
 }
 /* Footer */
 footer {
@@ -700,6 +775,25 @@ footer {
   }
   .reviews-items-wrap {
     width: 100%;
+  }
+  .contacts-inner-wrap {
+    flex-wrap: wrap;
+  }
+  .contacts-logo,
+  .contacts-text,
+  .constacts-info {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .contacts-logo {
+    padding: 13px 8px 8px;
+  }
+  .contacts-text {
+    text-align: center;
+    margin: 20px 0;
+    padding-top: 5px;
   }
 }
 
