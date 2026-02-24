@@ -9,6 +9,8 @@ const closeBtn = document.querySelector('.close-btn');
 const menuItemsColection = document.querySelectorAll('.menu-item');
 const formOpenBtn = document.querySelector('.form-open');
 const modelWindow = document.querySelector('.model-window');
+const scrollBtn = document.getElementById('scrollTopBtn');
+const contacts = document.getElementById('about');
 
 const closeMobileMenu = () => {
   body.classList.remove('isOpen');
@@ -93,3 +95,16 @@ const lightbox = new PhotoSwipeLightbox({
   pswpModule: () => import('/libraries/photoswipe.esm.js'),
 });
 lightbox.init();
+
+window.addEventListener('scroll', () => {
+  const contactsPosition = contacts.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight; // якщо блок контактів видно у вікні
+  if (contactsPosition <= windowHeight) {
+    scrollBtn.style.display = 'block';
+  } else {
+    scrollBtn.style.display = 'none';
+  }
+});
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});

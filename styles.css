@@ -674,6 +674,25 @@ footer {
   text-decoration: none;
   font-weight: 700;
 }
+/* Scroll to top Button */
+.scrollTopBtn {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  display: none;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  transition: opacity 0.3s;
+}
+.scrollTopBtn img {
+  width: 100%;
+}
+.scrollTopBtn:hover {
+  background: #09547c;
+}
 /* Model Window */
 .model-window {
   display: none;
@@ -883,6 +902,13 @@ footer {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     display: grid;
+  }
+  .scrollTopBtn {
+    bottom: 15px;
+    right: 10px;
+  }
+  .scrollTopBtn:hover {
+    background: none;
   }
 }
 
