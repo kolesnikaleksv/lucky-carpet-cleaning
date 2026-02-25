@@ -207,8 +207,8 @@ body {
 .services {
   width: 100%;
   background-image:
-    linear-gradient(rgba(27, 31, 76, 0.34), rgba(27, 31, 76, 0.34)),
-    url('/images/carpet-cleaning.webp');
+    linear-gradient(rgba(30, 80, 150, 0.35), rgba(30, 80, 150, 0.35)),
+    url('/images/banners/main_banner_grey.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom, center;
@@ -435,8 +435,8 @@ body {
 /* Features */
 .features {
   background-image:
-    linear-gradient(rgba(27, 31, 76, 0.66), rgba(27, 31, 76, 0.66)),
-    url(/images/carpet-cleaning-near-me.webp);
+    linear-gradient(rgba(30, 80, 150, 0.35), rgba(30, 80, 150, 0.35)),
+    url('/images/carpet-cleaning-near-me.webp');
   background-size: auto, cover;
   background-color: #124eb0;
   background-attachment: fixed;

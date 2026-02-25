@@ -20,14 +20,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'kolesnikaleksv@gmail.com';
-    $mail->Password   = 'zdpoecpgycozcwxb';
+    $mail->Username   = 'luckycarpetcleaning.orders@gmail.com';
+    $mail->Password   = 'ylklqfvuqeophuot';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
-    $mail->setFrom('kolesnikaleksv@gmail.com', 'Website Contact Form');
+    $mail->setFrom('luckycarpetcleaning.orders@gmail.com', 'Contact Form - Lucky Carpet Cleaning website');
 
-    $mail->addAddress('kolesnikaleksv@gmail.com');
+    $mail->addAddress('luckycarpetcleaning.orders@gmail.com');
 
     $mail->Subject = "New Quote Request: " . $subject;
 
