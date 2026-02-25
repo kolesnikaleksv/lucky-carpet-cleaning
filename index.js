@@ -7,10 +7,13 @@ const menu = document.querySelector('.menu');
 const menuWrapper = document.querySelector('.menu-wrapper');
 const closeBtn = document.querySelector('.close-btn');
 const menuItemsColection = document.querySelectorAll('.menu-item');
-const formOpenBtn = document.querySelector('.form-open');
+const formOpenBtn = document.querySelectorAll('.form-open');
 const modelWindow = document.querySelector('.model-window');
 const scrollBtn = document.getElementById('scrollTopBtn');
-const contacts = document.getElementById('about');
+const contacts = document.getElementById('testimonials');
+const form = document.getElementById('contactForm');
+const thankYouMessage = document.querySelector('.thankyou-message');
+const blockForm = document.querySelector('.form-block');
 
 const closeMobileMenu = () => {
   body.classList.remove('isOpen');
@@ -31,7 +34,7 @@ const openContactForm = () => {
   modelWindow.style.display = 'flex';
 };
 
-formOpenBtn.addEventListener('click', openContactForm);
+formOpenBtn.forEach((item) => item.addEventListener('click', openContactForm));
 
 mobileMenuButton.addEventListener('click', openMobileMenu);
 
@@ -42,15 +45,18 @@ menuItemsColection.forEach((item) =>
 );
 
 document.querySelector('.submit-btn').addEventListener('click', () => {
-  body.classList.remove('isOpen');
-  modelWindow.style.display = 'none';
+  modelWindow.style.display = 'flex';
 });
 
 window.onclick = (e) => {
   if (e.target === modelWindow) {
     modelWindow.style.display = 'none';
     body.classList.remove('isOpen');
-    f;
+  } else if (e.target === document.querySelector('.ok-btn')) {
+    body.classList.remove('isOpen');
+    modelWindow.style.display = 'none';
+    blockForm.style.display = 'block';
+    thankYouMessage.style.display = 'none';
   }
 };
 
@@ -98,13 +104,26 @@ lightbox.init();
 
 window.addEventListener('scroll', () => {
   const contactsPosition = contacts.getBoundingClientRect().top;
-  const windowHeight = window.innerHeight; // якщо блок контактів видно у вікні
+  const windowHeight = window.innerHeight;
   if (contactsPosition <= windowHeight) {
     scrollBtn.style.display = 'block';
   } else {
     scrollBtn.style.display = 'none';
   }
 });
+
 scrollBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  fetch('sendMail.php', { method: 'POST', body: new FormData(form) })
+    .then((response) => response.text())
+    .then((data) => {
+      thankYouMessage.style.display = 'flex';
+      blockForm.style.display = 'none';
+      form.reset();
+    })
+    .catch((error) => console.error('Error:', error));
 });

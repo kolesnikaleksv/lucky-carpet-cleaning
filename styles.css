@@ -710,9 +710,10 @@ footer {
   flex-direction: column;
   justify-content: center;
   width: 50%;
-  background-color: #ffffff;
+  background-color: #39bae7;
   max-height: 100vh;
   padding: 20px;
+  border-radius: 16px;
 }
 .form-title {
   margin-bottom: 20px;
@@ -734,7 +735,13 @@ footer {
   font-size: inherit;
   font-family: inherit;
   width: 100%;
+  border: 1px solid #39bae7;
+  border-radius: 16px;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
 .contact-form > textarea {
   margin-bottom: 24px;
   padding: 6px 8px;
@@ -746,6 +753,11 @@ footer {
   width: 100%;
   height: 80px;
   overflow: auto;
+  border-radius: 16px;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  resize: vertical;
 }
 .submit-btn {
   padding: 15px 40px;
@@ -759,6 +771,53 @@ footer {
 .submitBtn:hover {
   background-color: #39bae7;
 }
+/* Thand you model */
+.thankyou-message {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 16px;
+}
+.thankyou-message .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.thankyou-message .logo a {
+  display: flex;
+}
+.thankyou-message-title {
+  color: #ffffff;
+  text-align: center;
+}
+.thankyou-message-title span {
+  margin-top: 10px;
+  display: block;
+}
+.thankyou-message-subtitle {
+  color: #ffffff;
+  text-align: center;
+}
+.ok-btn {
+  padding: 15px 30px;
+  background: #124eb0;
+  border-radius: 16px;
+  box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, 0.73);
+  color: #ffffff;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+.ok-btn:hover {
+  color: #ffffff;
+  background: #0d3a85;
+  transform: scale(1.05);
+  box-shadow: 7px 8px 12px -4px rgba(0, 0, 0, 0.8);
+}
+
 @media (max-width: 989px) {
   .top-wrapper {
     padding: 10px 20px;

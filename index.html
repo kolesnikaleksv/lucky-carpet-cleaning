@@ -987,42 +987,62 @@
     </div>
     <div class="model-window">
       <div class="form-wrapper">
-        <h2 class="form-title">Get a Quote</h2>
-        <form
-          id="contactForm"
-          class="contact-form"
-          action="send.php"
-          method="POST"
-        >
-          <input
-            class="input-item"
-            type="text"
-            name="name"
-            placeholder="Yor name"
-            required
-          />
-          <input
-            class="input-item"
-            type="text"
-            name="subject"
-            placeholder="Subject"
-          />
-          <input
-            class="input-item"
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-          />
-          <input
-            class="input-item"
-            type="tel"
-            name="phone"
-            placeholder="Phone"
-          />
-          <textarea name="Message" placeholder="Your Message"></textarea>
-          <input class="submit-btn" type="submit" value="Submit" />
-        </form>
+        <div class="thankyou-message">
+          <div class="logo">
+            <a href="/">
+              <img
+                class="header-logo"
+                src="images/logo.jpeg"
+                alt="logo image"
+              />
+            </a>
+          </div>
+          <h2 class="thankyou-message-title">
+            Thank you! <span>Your message has been sent.</span>
+          </h2>
+          <h3 class="thankyou-message-subtitle">
+            We'll call you as soon as possible
+          </h3>
+          <div class="ok-btn" role="button" tabindex="0">Back to site</div>
+        </div>
+        <div class="form-block">
+          <h2 class="form-title">Get a Quote</h2>
+          <form
+            id="contactForm"
+            class="contact-form"
+            action="sendMail.php"
+            method="POST"
+          >
+            <input
+              class="input-item"
+              type="text"
+              name="user_name"
+              placeholder="Yor name"
+              required
+            />
+            <input
+              class="input-item"
+              type="text"
+              name="subject"
+              placeholder="Subject"
+            />
+            <input
+              class="input-item"
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+            <input
+              class="input-item"
+              type="tel"
+              name="phone"
+              placeholder="Phone"
+              required
+            />
+            <textarea name="Message" placeholder="Your Message"></textarea>
+            <input class="submit-btn" type="submit" value="Submit" />
+          </form>
+        </div>
       </div>
     </div>
     <script src="/libraries/swiper-bundle.min.js"></script>
