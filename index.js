@@ -129,8 +129,7 @@ form.addEventListener('submit', function (e) {
 });
 
 function initMap() {
-  const centerOfKent = { lat: 51.2, lng: 0.9 }; // Rough center of Kent area
-
+  const centerOfKent = { lat: 51.2014, lng: 0.9195 };
   const map = new google.maps.Map(document.getElementById('map'), {
     center: centerOfKent,
     zoom: 9,

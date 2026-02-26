@@ -941,6 +941,9 @@ footer {
   .map {
     padding: 0 20px;
   }
+  #map {
+    width: 100%;
+  }
   .map-wrap {
     display: block;
     width: 100%;
