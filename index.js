@@ -127,3 +127,45 @@ form.addEventListener('submit', function (e) {
     })
     .catch((error) => console.error('Error:', error));
 });
+
+function initMap() {
+  const centerOfKent = { lat: 51.2, lng: 0.9 }; // Rough center of Kent area
+
+  const map = new google.maps.Map(document.getElementById('map'), {
+    center: centerOfKent,
+    zoom: 9,
+    mapId: 'DEMO_MAP_ID', // testing ID — works
+    // mapId: '797623e6313ec0a6b5f876cf',
+    mapTypeControl: false,
+    streetViewControl: false,
+    fullscreenControl: false,
+  });
+  new google.maps.marker.AdvancedMarkerElement({
+    map: map,
+    position: { lat: 51.2726, lng: 0.5253 },
+    title: 'Maidstone',
+  });
+  const marker = new google.maps.marker.AdvancedMarkerElement({
+    map: map,
+    position: { lat: 51.0814, lng: 1.1695 },
+    title: 'Folkestone',
+  });
+  new google.maps.marker.AdvancedMarkerElement({
+    map: map,
+    position: { lat: 51.1465, lng: 0.875 },
+    title: 'Ashford',
+  });
+
+  new google.maps.marker.AdvancedMarkerElement({
+    map: map,
+    position: { lat: 51.1264, lng: 1.3162 },
+    title: 'Dover',
+  });
+
+  new google.maps.marker.AdvancedMarkerElement({
+    map: map,
+    position: { lat: 51.28, lng: 1.08 },
+    title: 'Canterbury',
+  });
+}
+window.initMap = initMap;

@@ -333,6 +333,67 @@ body {
   text-align: center;
   flex-grow: 1;
 }
+/* Map */
+.map {
+  width: 100%;
+  min-height: 300px;
+  margin-bottom: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 1.1905)), 40px);
+}
+.map-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+  padding: clamp(0.25em, calc(0.25rem + ((1vw - 3.2px) * 1.1905)), 10px) 0;
+  background: #39bae7;
+  /* background: #124eb0; */
+}
+#map {
+  width: 120%;
+  height: 450px;
+}
+.map-wrap {
+  width: 58%;
+}
+.map-info-wrap {
+  width: 42%;
+  position: relative;
+  min-height: 1px;
+  float: left;
+}
+.address-info {
+  background-image: url(/images/map-image.png);
+  min-height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.info-list {
+  list-style: none;
+  display: block;
+  padding-left: 30px;
+}
+.info-list li {
+  color: #595959;
+  line-height: 2;
+}
+.info-list li a {
+  color: #888;
+  text-decoration: none;
+}
+.info-list li a:hover {
+  color: #595959;
+  text-decoration: none;
+}
 /* Advertisement block */
 .ad-block {
   width: 100%;
@@ -385,7 +446,8 @@ body {
   width: 90%;
   min-height: 300px;
   margin-top: 20px;
-  background-color: #efefef;
+  /* background-color: #efefef; */
+  background-color: #e6f0f9;
   flex-direction: column;
   display: flex;
   align-items: center;
@@ -872,6 +934,19 @@ footer {
     text-align: center;
     margin: 20px 0;
     padding-top: 5px;
+  }
+  .map-wrap {
+    display: none;
+  }
+  .map {
+    padding: 0 20px;
+  }
+  .map-wrap {
+    display: block;
+    width: 100%;
+  }
+  .map-info-wrap {
+    display: none;
   }
 }
 

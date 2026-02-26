@@ -220,6 +220,32 @@
           </div>
         </div>
       </section>
+      <section class="map">
+        <div class="map-container">
+          <div class="map-wrap">
+            <div id="map"></div>
+          </div>
+          <div class="map-info-wrap">
+            <div class="address-info">
+              <div class="info">
+                <ul class="info-list">
+                  <li><h4 class="list">Carpet Bright UK</h4></li>
+                  <li>Church Road,</li>
+                  <li>Ashford,</li>
+                  <li>Surrey,</li>
+                  <li>TW15 2TS</li>
+                  <li><a href="tel:+447743533686">+447743533686</a></li>
+                  <li>
+                    <a href="mailto:luckycarpetcleaning4u@gmail.com"
+                      >luckycarpetcleaning4u@gmail.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="ad-block blue-light-background">
         <div class="ad-block-inner container">
           <h2 class="ad-block-title">Want to try out our services?</h2>
@@ -1052,7 +1078,12 @@
       type="module"
       src="/libraries/photoswipe-lightbox.esm.min.js"
     ></script>
-
+    <script
+      async
+      defer
+      loading="lazy"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwECbCSAbOHFhEuF1oEGJxCRSTS30L26E&libraries=marker&callback=initMap"
+    ></script>
     <script type="module" src="index.js"></script>
   </body>
 </html>
