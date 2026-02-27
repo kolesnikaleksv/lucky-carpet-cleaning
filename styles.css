@@ -712,6 +712,10 @@ body {
 .constacts-info .social-block {
   margin-top: 15px;
 }
+.social-block a {
+  display: flex;
+  align-items: center;
+}
 /* Footer */
 footer {
   width: 100%;
