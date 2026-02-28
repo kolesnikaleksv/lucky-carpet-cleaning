@@ -498,7 +498,7 @@ body {
 .features {
   background-image:
     linear-gradient(rgba(30, 80, 150, 0.35), rgba(30, 80, 150, 0.35)),
-    url('/images/carpet-cleaning-near-me.webp');
+    url('/images/banners/service_banner.webp');
   background-size: auto, cover;
   background-color: #124eb0;
   background-attachment: fixed;
