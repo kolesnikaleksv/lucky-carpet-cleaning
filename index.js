@@ -60,12 +60,51 @@ window.onclick = (e) => {
   }
 };
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.testimonials-swiper', {
   speed: 800,
   loop: true,
   pagination: { el: '.swiper-pagination', clickable: true },
   autoplay: {
     delay: 3000,
+  },
+});
+
+const swiperPrices = new Swiper('.prices-swiper', {
+  speed: 1200,
+  loop: false,
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+    hide: false,
+  },
+
+  slidesPerView: 1,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  breakpoints: {
+    777: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      effect: 'slide',
+    },
+    1100: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1500: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+      effect: 'slide',
+    },
+    1900: {
+      slidesPerView: 5,
+      spaceBetween: 30,
+      effect: 'slide',
+    },
   },
 });
 

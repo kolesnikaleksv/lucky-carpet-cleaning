@@ -434,7 +434,8 @@ body {
 }
 .testimonials-title,
 .features-title,
-.gallery-title {
+.gallery-title,
+.prices-title {
   font-weight: 300;
   align-self: center;
   text-align: center;
@@ -446,7 +447,6 @@ body {
   width: 90%;
   min-height: 300px;
   margin-top: 20px;
-  /* background-color: #efefef; */
   background-color: #e6f0f9;
   flex-direction: column;
   display: flex;
@@ -463,7 +463,7 @@ body {
   margin-bottom: 20px;
 }
 /* Swiper */
-.swiper {
+.testimonials-swiper {
   width: 100%;
   height: 235px;
 }
@@ -595,6 +595,56 @@ body {
 .gallery-item-content img {
   width: 100%;
   border-style: none;
+}
+/* Prices Slider */
+.prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prices-inner-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 1.1905)), 40px);
+  padding-bottom: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 1.1905)), 40px);
+  width: 100%;
+}
+.prices-slider-block {
+  width: 90%;
+  margin-top: 20px;
+}
+.prices-swiper {
+  height: 600px;
+  overflow: hidden;
+}
+.swiper-wrapper,
+.swiper-slide {
+  height: 100%;
+}
+.price-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+}
+.price-picture img {
+  max-height: 100%;
+}
+.prices-swiper .swiper-scrollbar {
+  background: #39bae7;
+}
+
+.prices-swiper .swiper-scrollbar-drag {
+  background: #124eb0;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.swiper-scrollbar:hover .swiper-scrollbar-drag,
+.swiper-scrollbar:active .swiper-scrollbar-drag {
+  opacity: 1;
+  background: #0044cc;
 }
 /* Reviews */
 .reviews {
@@ -752,6 +802,7 @@ footer {
   border: none;
   border-radius: 50%;
   transition: opacity 0.3s;
+  z-index: 100;
 }
 .scrollTopBtn img {
   width: 100%;
@@ -1027,7 +1078,7 @@ footer {
   .advantages-item-wrap {
     width: 100%;
   }
-  .swiper {
+  .testimonials-swiper {
     height: 350px;
   }
   .features-block {
@@ -1067,7 +1118,7 @@ footer {
   .form-wrapper {
     width: 85%;
   }
-  .swiper {
+  .testimonials-swiper {
     height: 520px;
   }
   .reviews-items-wrap {
