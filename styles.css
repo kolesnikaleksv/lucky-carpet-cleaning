@@ -696,11 +696,11 @@ body {
   width: 100%;
   background-image:
     linear-gradient(rgba(18, 78, 176, 0.9), rgba(10, 40, 120, 0.9)),
-    url(/images/lucky-carpet-cleaning.webp);
+    url(/images/gallery/carpet-cleaning-results-before-after.webp);
   background-size: auto, cover;
   background-color: #124eb0;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
   display: flex;
   justify-content: center;
 }

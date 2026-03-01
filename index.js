@@ -71,7 +71,7 @@ const swiper = new Swiper('.testimonials-swiper', {
 
 const swiperPrices = new Swiper('.prices-swiper', {
   speed: 1200,
-  loop: false,
+  loop: true,
   scrollbar: {
     el: '.swiper-scrollbar',
     draggable: true,
