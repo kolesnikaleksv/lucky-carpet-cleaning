@@ -18,15 +18,13 @@ const blockForm = document.querySelector('.form-block');
 const closeMobileMenu = () => {
   body.classList.remove('isOpen');
   menuWrapper.classList.remove('wrapper-menu-active');
-  menu.classList.remove('mobile-menu-active');
-  mobileMenuButton.classList.remove('hidden');
+  mobileMenuButton.classList.remove('fade');
 };
 
 const openMobileMenu = () => {
   document.body.classList.add('isOpen');
   menuWrapper.classList.add('wrapper-menu-active');
-  menu.classList.add('mobile-menu-active');
-  mobileMenuButton.classList.add('hidden');
+  mobileMenuButton.classList.add('fade');
 };
 
 const openContactForm = () => {
