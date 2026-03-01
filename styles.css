@@ -503,6 +503,7 @@ body {
   background-color: #124eb0;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
   color: #ffffff;
 }
