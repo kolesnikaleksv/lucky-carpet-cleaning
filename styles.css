@@ -792,7 +792,6 @@ body {
   margin-bottom: 30px;
 }
 .constacts-info .mobile,
-.header-email,
 .map-marker {
   margin-bottom: 10px;
   flex-wrap: nowrap;
@@ -1084,8 +1083,7 @@ footer {
   }
   .menu {
     flex-direction: column;
-
-    margin: 50px 20px;
+    margin: 60px 20px;
     position: relative;
     text-transform: uppercase;
   }
@@ -1197,6 +1195,9 @@ footer {
   }
   .header-contacts {
     gap: 7px;
+  }
+  .header-email {
+    margin-bottom: 10px;
   }
   .services-inner-wrapper {
     padding: 5% 20px;

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /sendmail.php
+Allow: /
+
+Sitemap: https://www.luckycc.dev.webwizardok.com/sitemap.xml
